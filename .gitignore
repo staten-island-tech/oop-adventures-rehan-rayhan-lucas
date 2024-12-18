@@ -1,0 +1,17 @@
+# Ignore virtual environment directory
+venv/
+
+# If you have other environment directories, add them as well
+.env/
+.venv/Include/site/python3.12/pygame/_blit_info.h
+.venv/Include/site/python3.12/pygame/_blit_info.h
+.venv/Include/site/python3.12/pygame/_pygame.h
+.venv/Include/site/python3.12/pygame/_surface.h
+.venv/Include/site/python3.12/pygame/include/_pygame.h
+.venv/Include/site/python3.12/pygame/include/_pygame.h
+.venv/Include/site/python3.12/pygame/include/pgimport.h
+.venv/Include/site/python3.12/pygame/include/pygame.h
+.venv/Include/site/python3.12/pygame/include/pygame_freetype.h
+.venv/Include/site/python3.12/pygame/include/pygame_mixer.h
+.venv/Include/site/python3.12/pygame/mask.h
+.venv/Include/site/python3.12/pygame/mixer.h
