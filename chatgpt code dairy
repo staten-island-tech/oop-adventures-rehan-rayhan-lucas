@@ -1,4 +1,4 @@
-ChatGPT Coding Diary
+"""ChatGPT Coding Diary
 Project Name: [Insert project name]
 Date: [Insert date]
 1. Task/Problem Description
@@ -58,5 +58,5 @@ In this section, reflect on what you learned from this coding session. Did you g
 
 Example:
 
-I learned how to implement an efficient sorting algorithm, and I now understand the time complexity differences between various sorting methods.
+I learned how to implement an efficient sorting algorithm, and I now understand the time complexity differences between various sorting methods."""
 
