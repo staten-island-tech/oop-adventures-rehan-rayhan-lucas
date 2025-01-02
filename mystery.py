@@ -70,3 +70,16 @@ class Case:
             self.detective.interview_suspect(suspect)
 
         self.detective.solve_case()
+class Sheriff:
+    def __init__(self, name):
+        self.name = name 
+    
+    def introduce_case(self, detective, victim, suspects):
+        print(f"\nSheriff {self.name}: Detective {detective.name}, we have a murder case.")
+        print(f"Victim: {victim.name}, the crime happened last night.")
+        print("The suspects are:")
+        for suspect in suspects:
+            print(f"- {suspect.name}, {suspect.relationship_to_victim}")
+        
+        print("The weapon used was a knife, and we need your help to solve it.")
+        detective.receive_case(victim, suspects)
