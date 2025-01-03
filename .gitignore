@@ -1,0 +1,27 @@
+# Ignore virtual environment directory
+venv
+.venv
+# If you have other environment directories, add them as well
+.env/
+.venv/Include/site/python3.12/pygame/_blit_info.h
+.venv/Include/site/python3.12/pygame/_blit_info.h
+.venv/Include/site/python3.12/pygame/_pygame.h
+.venv/Include/site/python3.12/pygame/_surface.h
+.venv/Include/site/python3.12/pygame/include/_pygame.h
+.venv/Include/site/python3.12/pygame/include/_pygame.h
+.venv/Include/site/python3.12/pygame/include/pgimport.h
+.venv/Include/site/python3.12/pygame/include/pygame.h
+.venv/Include/site/python3.12/pygame/include/pygame_freetype.h
+.venv/Include/site/python3.12/pygame/include/pygame_mixer.h
+.venv/Include/site/python3.12/pygame/mask.h
+.venv/Include/site/python3.12/pygame/mixer.h
+*.py
+.venv/Lib/site-packages/pip/_internal/commands/__pycache__/__init__.cpython-312.pyc
+.venv/Lib/site-packages/pip/_internal/commands/__init__.py
+.venv/Lib/site-packages/pip/_internal/cli/status_codes.py
+.venv/Lib/site-packages/pip/_internal/cli/spinners.py
+.venv/Lib/site-packages/pip/_internal/cli/req_command.py
+.venv/Lib/site-packages/pip/_internal/cli/progress_bars.py
+.venv/Lib/site-packages/pip/_internal/cli/parser.py
+.venv/Lib/site-packages/pip/_internal/cli/main_parser.py
+.venv/Lib/site-packages/pip/_internal/cli/main.py
