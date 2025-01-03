@@ -1,4 +1,3 @@
-# Mystery storyline and clues
 class Detective:
     def __init__(self, name):
         self.name = name
