@@ -83,3 +83,27 @@ class Sheriff:
         
         print("The weapon used was a knife, and we need your help to solve it.")
         detective.receive_case(victim, suspects)
+victim = Suspect("Riener", "No alibi", "victim")
+suspect1 = Suspect("Alice Smith", "Was at home alone", "ex-girlfriend", "Jealousy over an affair", False)
+suspect2 = Suspect("Bob Johnson", "Was working late", "business partner", "Financial gain - inheritance", True)
+suspect3 = Suspect("Charlie Brown", "Was at the gym", "friend", "Revenge for being fired", False)
+
+clue1 = Clue("Bloodied knife", "Near the victim's body")
+clue2 = Clue("Suspicious phone call made to the victim", "Victim's phone records")
+clue3 = Clue("A torn piece of clothing matching Alice's style", "Outside the house")
+
+detective = Detective("Sherlock Holmes")
+sheriff = Sheriff("William Moriarity")
+
+sheriff.introduce_case(detective, victim, [suspect1, suspect2, suspect3])
+
+case = Case("Riener murder", detective)
+case.add_clue(clue1)
+case.add_clue(clue2)
+case.add_clue(clue3)
+
+case.add_suspect(suspect1)
+case.add_suspect(suspect2)
+case.add_suspect(suspect3)
+
+case.begin_investigation()
