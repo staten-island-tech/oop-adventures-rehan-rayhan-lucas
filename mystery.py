@@ -102,16 +102,16 @@ class Sheriff:
         detective.receive_case(victim, suspects)
 
 
-victim = Suspect("John Doe", "No alibi", "victim")
+victim = Suspect("Reiner Raktu", "No alibi", "victim")
 suspect1 = Suspect("Alice Smith", "Was at home alone", "ex-girlfriend", "Jealousy over an affair", False)
-suspect2 = Suspect("Bob Johnson", "Was working late", "business partner", "Financial gain - inheritance", True)
+suspect2 = Suspect("William Moriarty", "Was working late", "business partner", "Financial gain - inheritance", True)
 suspect3 = Suspect("Charlie Brown", "Was at the gym", "friend", "Revenge for being fired", False)
 
 clue1 = Clue("Bloodied knife", "Near the victim's body")
 clue2 = Clue("Suspicious phone call made to the victim", "Victim's phone records")
 clue3 = Clue("A torn piece of clothing matching Alice's style", "Outside the house")
 
-detective = Detective("Jane Doe")
+detective = Detective("Sherlock Holmes")
 sheriff = Sheriff("Joe Smith")
 
 sheriff.introduce_case(detective, victim, [suspect1, suspect2, suspect3])
