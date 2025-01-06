@@ -11,7 +11,16 @@ class Detective:
 
     def solve_case(self):
         if len(self.clues_found) > 0 and len(self.suspects_interviewed) > 0:
-            print(f"{self.name} is analyzing the case based on the clues and suspects.")
+            print(f"\n{self.name} is analyzing the case based on the clues and suspects.")
+            for clue in self.clues_found:
+                print(clue)
+
+            for suspect in self.suspects_interviewed:
+                print(suspect.reveal_motive())
+                if suspect.is_guilty:
+                    print(f"Detective {self.name} concludes that {suspect.name} is the murderer!")
+                    return suspect
+            print(f"{self.name} could not definitively find the murderer based on the evidence.")
         else:
             print(f"{self.name} needs more clues or interviews to solve the case.")
         return None
@@ -91,3 +100,30 @@ class Sheriff:
         
         print("The weapon used was a knife, and we need your help to solve it.")
         detective.receive_case(victim, suspects)
+
+
+victim = Suspect("John Doe", "No alibi", "victim")
+suspect1 = Suspect("Alice Smith", "Was at home alone", "ex-girlfriend", "Jealousy over an affair", False)
+suspect2 = Suspect("Bob Johnson", "Was working late", "business partner", "Financial gain - inheritance", True)
+suspect3 = Suspect("Charlie Brown", "Was at the gym", "friend", "Revenge for being fired", False)
+
+clue1 = Clue("Bloodied knife", "Near the victim's body")
+clue2 = Clue("Suspicious phone call made to the victim", "Victim's phone records")
+clue3 = Clue("A torn piece of clothing matching Alice's style", "Outside the house")
+
+detective = Detective("Jane Doe")
+sheriff = Sheriff("Joe Smith")
+
+sheriff.introduce_case(detective, victim, [suspect1, suspect2, suspect3])
+
+case = Case("John Doe's murder", detective)
+case.add_clue(clue1)
+case.add_clue(clue2)
+case.add_clue(clue3)
+
+case.add_suspect(suspect1)
+case.add_suspect(suspect2)
+case.add_suspect(suspect3)
+
+case.begin_investigation()
+
