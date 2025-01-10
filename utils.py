@@ -9,18 +9,12 @@ class utility:
 #Creating Utilities
 glassermagnifyer = utility("Magnifying Glass", "To examine/find evidence. 25 percent chance of breaking", 5)
 notebooker = utility("Notebook", "To write down notes.", 5)
-cameraer = utility("Camera", "To keep memories! One time usage. Photos can be put into notebook.", 3)
-mapper = utility("Map", "For recording the surroundings.", 1)
 keyer = utility("Key", "To unlock locked doors (duh).", 10)
-packerbacker = utility("Backpack", "To increase your inventory space.", 20)
-kitterfingerprinter = utility("Fingerprinting Kit", "To identify fingerprints.", 10)
+kitterfingerprinter = utility("Fingerprinting Kit", "To identify fingerprints.", 20)
 utilities = [
     glassermagnifyer,
     notebooker,
-    cameraer,
-    mapper,
     keyer,
-    packerbacker,
     kitterfingerprinter
 ]
 for utility in utilities:
