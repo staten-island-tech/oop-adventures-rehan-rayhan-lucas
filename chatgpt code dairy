@@ -1,4 +1,4 @@
-ChatGPT Coding Diary
+"""ChatGPT Coding Diary
 Project Name: [Insert project name]
 Date: [Insert date]
 1. Task/Problem Description
@@ -58,5 +58,37 @@ In this section, reflect on what you learned from this coding session. Did you g
 
 Example:
 
-I learned how to implement an efficient sorting algorithm, and I now understand the time complexity differences between various sorting methods.
+I learned how to implement an efficient sorting algorithm, and I now understand the time complexity differences between various sorting methods."""
 
+ChatGPT Coding Diary
+Project Name: [Object Oriented Adventures *Final-ish* Project]
+Date: [December 2024]
+1: I was trying to figure out how to add more things to my code and make the game more complex.
+2: I added different things and I added them and then i asked chatgpt. 
+Chatgpt told me to add Time-based investigation: Add an element where time and multiple rounds of investigation play a role in determining the outcome.
+Clue analysis: Introduce the concept of analyzing clues in-depth. For example, adding forensic analysis or fingerprint examination.
+So I Did thast and thats how chatgpt helped me make it more complex
+My coe:      for clue in self.clues_found:
+                print(clue)
+
+            for suspect in self.suspects_interviewed:
+                print(suspect.reveal_motive())
+                if suspect.is_guilty:
+                    print(f"Detective {self.name} concludes that {suspect.name} is the murderer!")
+                    return suspect
+            print(f"{self.name} could not definitively find the murderer based on the evidence.")
+updated code: 
+def solve_case(self):
+    if len(self.clues_found) > 0 and len(self.suspects_interviewed) > 0:
+            print(f"\n{self.name} is analyzing the case based on the clues and suspects.")
+            for clue in self.clues_found:
+                print(clue)
+                self.analyze_clue(clue)
+
+            for suspect in self.suspects_interviewed:
+                print(suspect.reveal_motive())
+                self.assess_suspect(suspect)
+            print(f"{self.name} needs more time to make a final decision on the murderer.")
+        else:
+            print(f"{self.name} needs more clues or interviews to solve the case.")
+        return None
