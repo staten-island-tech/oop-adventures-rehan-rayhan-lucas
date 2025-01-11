@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import random
 
 class Detective:
@@ -52,18 +53,33 @@ class Detective:
 
 class Clue:
     def __init__(self, description, location, is_fingerprint=False):
+=======
+class Clue:
+    def __init__(self, name, description, location):
+        self.name = name
+>>>>>>> Stashed changes
         self.description = description
         self.location = location
         self.is_fingerprint = is_fingerprint
 
+<<<<<<< Updated upstream
     def __str__(self):
         return f"Clue: {self.description} found at {self.location}"
 
 
 class Suspect:
     def __init__(self, name, alibi, relationship_to_victim, motive=None, is_guilty=False, psychological_profile=None):
+=======
+    def reveal(self):
+        return f"Clue: {self.name} - {self.description}"
+
+class Suspect:
+    def __init__(self, name, description, alibi, is_suspect=False):
+>>>>>>> Stashed changes
         self.name = name
+        self.description = description
         self.alibi = alibi
+<<<<<<< Updated upstream
         self.relationship_to_victim = relationship_to_victim
         self.motive = motive
         self.is_guilty = is_guilty
@@ -84,8 +100,14 @@ class Suspect:
         if self.psychological_profile:
             return f"Psychological Profile: {self.psychological_profile}"
         return "No psychological profile available."
+=======
+        self.is_suspect = is_suspect
+>>>>>>> Stashed changes
 
+    def interrogate(self):
+        return f"Interrogating {self.name}: {self.alibi}"
 
+<<<<<<< Updated upstream
 class Case:
     def __init__(self, victim_name, detective):
         self.victim_name = victim_name
@@ -149,3 +171,23 @@ case.add_suspect(suspect3)
 
 case.begin_investigation()
 
+=======
+# Example clues and suspects
+clue1 = Clue("Fingerprints", "Found on the murder weapon.", "Crime Scene Outside")
+clue2 = Clue("Bloody Knife", "Located near the body.", "Crime Scene Outside")
+
+suspect1 = Suspect("Suspect One", "Wears glasses, blue shirt, black pants", "Was in the sheriff's office during the murder.")
+suspect2 = Suspect("Suspect Two", "Has a mustache, red shirt, black pants", "Claims to have an alibi.")
+
+# Function to solve the mystery
+def solve_mystery(clues, suspects):
+    # Basic logic for solving the mystery
+    for clue in clues:
+        print(clue.reveal())
+
+    for suspect in suspects:
+        print(suspect.interrogate())
+        if suspect.is_suspect:
+            return f"{suspect.name} is the culprit!"
+    return "The case remains unsolved."
+>>>>>>> Stashed changes
