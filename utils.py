@@ -7,10 +7,10 @@ class utility:
     def writesmth(self):
         return f"{self.name}: {self.description} (Cost: {self.cost})"
 #Creating Utilities
-glassermagnifyer = utility("Magnifying Glass", "To examine/find evidence. 25 percent chance of breaking", 5)
+glassermagnifyer = utility("Magnifying Glass", "To examine/find evidence.", 10)
 notebooker = utility("Notebook", "To write down notes.", 5)
 keyer = utility("Key", "To unlock locked doors (duh).", 10)
-kitterfingerprinter = utility("Fingerprinting Kit", "To identify fingerprints.", 20)
+kitterfingerprinter = utility("Fingerprinting Kit", "To identify fingerprints.", 25)
 utilities = [
     glassermagnifyer,
     notebooker,
