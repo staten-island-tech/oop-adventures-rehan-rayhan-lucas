@@ -1,94 +1,70 @@
-<<<<<<< Updated upstream
-e
-=======
-import pygame
-
-class Detective(pygame.sprite.Sprite):
-    def __init__(self, x, y):
-        super().__init__()
-        self.image = pygame.Surface((50, 100))  # Placeholder for character image
-        self.image.fill((255, 255, 255))  # Color for testing
-        self.rect = self.image.get_rect()
-        self.rect.x = x
-        self.rect.y = y
-        self.state = 'idle'  # Default state
-
-    def animate(self):
-        if self.state == 'idle':
-            self.image.fill((255, 255, 255))  # Idle state appearance
-        elif self.state == 'walking':
-            self.image.fill((0, 255, 0))  # Walking state appearance (Green)
-        elif self.state == 'talking':
-            self.image.fill((0, 0, 255))  # Talking state appearance (Blue)
-        else:
-            self.image.fill((255, 255, 255))  # Default appearance
-
-    def update(self):
-        self.animate()  # Update the animation every frame
-
-    def draw(self, screen):
-        screen.blit(self.image, self.rect)
-
-class Sheriff(pygame.sprite.Sprite):
-    def __init__(self, x, y):
-        super().__init__()
-        self.image = pygame.Surface((50, 100))  # Placeholder for sheriff image
-        self.image.fill((255, 255, 255))  # Color for testing
-        self.rect = self.image.get_rect()
-        self.rect.x = x
-        self.rect.y = y
-        self.state = 'idle'
-
-    def animate(self):
-        if self.state == 'idle':
-            self.image.fill((255, 255, 255))  # Idle state appearance
-        elif self.state == 'walking':
-            self.image.fill((0, 0, 255))  # Walking state appearance (Blue)
-        elif self.state == 'talking':
-            self.image.fill((255, 0, 0))  # Talking state appearance (Red)
-        else:
-            self.image.fill((255, 255, 255))
-
-    def update(self):
-        self.animate()
-
-    def draw(self, screen):
-        screen.blit(self.image, self.rect)
-
-class Suspect(pygame.sprite.Sprite):
-    def __init__(self, name, description, x, y, shirt_color, pants_color, hair_color, has_mustache=False):
-        super().__init__()
+class Detective:
+    def __init__(self, name, age, experience):
         self.name = name
-        self.description = description
-        self.hair_color = hair_color
-        self.shirt_color = shirt_color
-        self.pants_color = pants_color
-        self.has_mustache = has_mustache
-        self.image = pygame.Surface((50, 100))  # Placeholder for suspect image
-        self.image.fill((255, 255, 255))  # Color for testing
-        self.rect = self.image.get_rect()
-        self.rect.x = x
-        self.rect.y = y
-        self.state = 'idle'
+        self.age = age
+        self.experience = experience
+        self.inventory = []
+        # Add any other detective-specific attributes or methods
 
-    def animate(self):
-        if self.state == 'idle':
-            self.image.fill((255, 255, 255))  # Idle state appearance
-        elif self.state == 'walking':
-            self.image.fill((0, 255, 0))  # Walking state appearance (Green)
-        elif self.state == 'talking':
-            self.image.fill((0, 0, 255))  # Talking state appearance (Blue)
+    def investigate(self):
+        return f"{self.name} is investigating the crime scene."
+
+    def add_to_inventory(self, item):
+        if len(self.inventory) < 4:
+            self.inventory.append(item)
         else:
-            self.image.fill((255, 255, 255))  # Default appearance
+            return "Inventory is full."
 
-    def update(self):
-        self.animate()
+    def show_inventory(self):
+        return f"{self.name}'s inventory: {', '.join(self.inventory) if self.inventory else 'Empty'}"
 
-    def draw(self, screen):
-        screen.blit(self.image, self.rect)
+class Sheriff:
+    def __init__(self, name, age, rank):
+        self.name = name
+        self.age = age
+        self.rank = rank
+        self.knowledge = "Has information about the market and game lore."
 
-suspect1 = Suspect("Suspect One", "Wears glasses, blue shirt, black pants", 100, 200, "blue", "black", "black")
-suspect2 = Suspect("Suspect Two", "Has a mustache, red shirt, black pants", 200, 200, "red", "black", "brown", True)
-suspect3 = Suspect("Suspect Three", "Has orange hair, red shirt, black pants", 300, 200, "red", "black", "orange")
-suspects = [suspect1, suspect2, suspect3]
->>>>>>> Stashed changes
+    def provide_info(self):
+        return f"The sheriff provides information: {self.knowledge}"
+
+class Suspect1:
+    def __init__(self, name, age, alibi):
+        self.name = name
+        self.age = age
+        self.alibi = alibi
+        self.story = "I was at home during the crime."
+
+    def tell_story(self):
+        return f"{self.name}: {self.story}"
+
+    def give_alibi(self):
+        return f"{self.name}'s alibi: {self.alibi}"
+
+class Suspect2:
+    def __init__(self, name, age, alibi):
+        self.name = name
+        self.age = age
+        self.alibi = alibi
+        self.story = "I was at the store when the crime happened."
+
+    def tell_story(self):
+        return f"{self.name}: {self.story}"
+
+    def give_alibi(self):
+        return f"{self.name}'s alibi: {self.alibi}"
+
+class Suspect3:
+    def __init__(self, name, age, alibi):
+        self.name = name
+        self.age = age
+        self.alibi = alibi
+        self.story = "I was out of town during the incident."
+
+    def tell_story(self):
+        return f"{self.name}: {self.story}"
+
+    def give_alibi(self):
+        return f"{self.name}'s alibi: {self.alibi}"
+
+
