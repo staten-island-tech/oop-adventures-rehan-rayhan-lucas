@@ -1,12 +1,13 @@
- # Locations where the game takes place
-#Suspect 3 people
-# Detective
-# Sheriff
-# Sheriff's office
-# Interrogation room with suspects
-# Outside front of police station 2 roads to market one road to house
-#Market for buying items
-#Front of Home
-#Inside First floor of home
-#Inside Second floor of home
-#Utilities
+import pygame
+def switch_location(current_location, new_location):
+    current_location = new_location
+    return current_location
+
+def draw_dialogue_box(screen, text, font, x, y):
+    box = pygame.Rect(x, y, 600, 50)
+    pygame.draw.rect(screen, (0, 0, 0), box)
+    rendered_text = font.render(text, True, (255, 255, 255))
+    screen.blit(rendered_text, (x + 10, y + 10))
+
+
+
