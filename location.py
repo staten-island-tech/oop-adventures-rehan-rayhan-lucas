@@ -1,26 +1,25 @@
-<<<<<<< Updated upstream
- # Locations where the game takes place
-#Suspect 3 people
-# Detective
-# Sheriff
-# Sheriff's office
-# Interrogation room with suspects
-# Outside front of police station 2 roads to market one road to house
-#Market for buying items
-#Front of Home
-#Inside First floor of home
-#Inside Second floor of home
-#Utilities
-=======
-import pygame
+
 
 class Location:
-    def __init__(self, name, description, drawing_func):
+    def __init__(self, name, clues):
         self.name = name
-        self.description = description
-        self.drawing_func = drawing_func
+        self.clues = clues
 
-    def display(self, screen):
-        self.drawing_func(screen)  # Calls the location-specific drawing function
 
->>>>>>> Stashed changes
+class LocationManager:
+    def __init__(self):
+        self.locations = [
+            Location("Study", ["A blood-stained handkerchief"]),
+            Location("Hallway", ["A torn piece of fabric"]),
+            Location("Victim's Room", ["A letter about the will"]),
+        ]
+    
+    def get_locations(self):
+        return self.locations
+    
+    def explore_location(self, location_name):
+        for location in self.locations:
+            if location.name.lower() == location_name.lower():
+                return f"Exploring {location.name}. Clues found: {', '.join(location.clues)}"
+        return "Location not found." 
+
