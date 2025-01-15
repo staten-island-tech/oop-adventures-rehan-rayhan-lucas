@@ -8,3 +8,5 @@ class SecretManager:
 
     def reveal_secret(self, location_name):
         return self.secrets.get(location_name, None) 
+
+

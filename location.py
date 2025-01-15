@@ -1,5 +1,4 @@
 
-
 class Location:
     def __init__(self, name, clues):
         self.name = name
@@ -22,4 +21,5 @@ class LocationManager:
             if location.name.lower() == location_name.lower():
                 return f"Exploring {location.name}. Clues found: {', '.join(location.clues)}"
         return "Location not found." 
+
 

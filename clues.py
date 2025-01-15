@@ -1,5 +1,5 @@
 class Clue:
-   def __init__(self, description, cost):
+    def __init__(self, description, cost):
         self.description = description
         self.cost = cost
 
