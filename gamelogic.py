@@ -1,8 +1,8 @@
-from characters import CharacterManager
+from character import CharacterManager
 from clues import ClueManager
-from locations import LocationManager
+from location import LocationManager
 from inventory import Inventory
-from secrets import SecretManager
+from secretss import SecretManager
 from puzzles import PuzzleManager
 
 class MysteryGame:
