@@ -1,105 +1,19 @@
+Question I asked:
+1. how the flip do I connect the character managerclue manager and secret manager from the files I gave you
+2. best way to handle the user input for selecting characters 
+3. how do I avoid repetitive code.
 
-# ChatGPT Coding Diary
+Anwsers:
+1. basically it gave me an over complicated explanation of a game logic thing that combines all the clases which is dumb because Rehan is working on that part >:( 
+2. "The best way to handle user input for selecting characters is to use a numbered menu system with input validation to ensure the selection corresponds to available options." This was shown based on the number thingies you see when you choose what to do in ther terminal.
+3. "You can avoid repetitive code by using functions, loops, or data structures (like dictionaries or lists) to encapsulate repeated logic, enabling reusability and reducing redundancy." 
+I have no clue what it said but basically I made a lot of functions so it wont be repeitive chat >:) 
 
-## Project Name: _[Insert project name]_
+Changes I made based on anwsers:
+For the first one I told rehan to do it cuz that was his part for number 2 basically the number drop down menu you see when you choose which character to pick that was basically what I did and also I just like described the characters in the character class thingy. for number 3 I just made a bunch of functions. 
 
-### Date: _[Insert date]_
+Testing and results:
+The game worked.. what more is there to explain smh. 
 
----
-
-## 1. **Task/Problem Description**
-
-Briefly describe the problem you're trying to solve or the task you're working on.
-
-Example:
-> I need to write a program that sorts a list of integers in ascending order.
-
----
-
-## 2. **Initial Approach/Code**
-
-Describe the initial approach you took to solving the problem. If you started writing code, include it here.
-
-```python
-# Example: Initial sorting function
-def sort_numbers(numbers):
-    return sorted(numbers)
-```
-
-- What was your plan for solving the problem?
-- Did you have any initial thoughts or strategies before using ChatGPT?
-
----
-
-## 3. **Interaction with ChatGPT**
-
-### Questions/Requests to ChatGPT
-Write down the questions or requests you made to ChatGPT. 
-Also include what code from ChatGPT you are unsure of and craft a question that asks for further clarification. 
- For example:
-
-- "How do I reverse a list in Python?"
-- "Can you suggest a more efficient way to sort a list?"
-- Why did ChatGPT opt for create element when my teacher suggested insertAdjacentHTML?
-
-```text
-# Example prompt to ChatGPT:
-How can I optimize this sorting function for large datasets?
-```
-
----
-
-## 4. **ChatGPT's Suggestions/Code Changes**
-
-Record the code or suggestions ChatGPT provided. Include any changes or improvements ChatGPT suggested and how it influenced your approach.
-
-```python
-# ChatGPT suggested using a custom sorting algorithm to improve efficiency
-def optimized_sort(numbers):
-    # Implementation of a more efficient sorting algorithm
-    pass
-```
-
-- What was ChatGPT's solution or suggestion?
-- How did it differ from your original approach?
-
----
-
-## 5. **Reflection on Changes**
-
-Reflect on the changes made to your code after ChatGPT's suggestions. Answer the following questions:
-
-- Why do you think ChatGPT's suggestions are helpful or relevant?
-- Did the suggestions improve your code? How?
-- Did you understand why the changes were made, or are you still uncertain about some parts?
-
-Example:
-> ChatGPT recommended using a more efficient sorting algorithm like quicksort. I think this will improve the runtime for large inputs, but I need to review the algorithm's complexity to fully understand its advantages.
-
----
-
-## 6. **Testing and Results**
-
-After making the changes, did you test your code? What were the results?
-
-- Did you run any tests (e.g., unit tests, edge cases)?
-- Did the code work as expected after incorporating ChatGPT's changes?
-
-```python
-# Example: Testing the updated sorting function
-numbers = [5, 2, 9, 1]
-print(optimized_sort(numbers))  # Expected output: [1, 2, 5, 9]
-```
-
-- Did you encounter any bugs or issues during testing?
-
----
-
-## 7. **What Did You Learn?**
-
-In this section, reflect on what you learned from this coding session. Did you gain any new insights, or were there areas you still struggled with? 
-
-Example:
-> I learned how to implement an efficient sorting algorithm, and I now understand the time complexity differences between various sorting methods.
-
----
+What I learned:
+Basically I learned that making functions and using stuff like lists or loops can save me from writing the same bad code over again. Also I realized that keeping things simple (dont use chatgpt to help you with pygame projects cuz its bad) like using numbered menus, makes handling user input way easier. 
