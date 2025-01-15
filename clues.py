@@ -9,7 +9,7 @@ class ClueManager:
         self.clues = [
             Clue("A blood-stained handkerchief found in the study.", 5),
             Clue("A torn piece of fabric found in the hallway.", 3),
-            Clue("A letter in the victim’s desk about changing the will.", 8),
+            Clue("A letter in the victim's desk about changing the will.", 8),
         ]
 
     def get_clues(self):
