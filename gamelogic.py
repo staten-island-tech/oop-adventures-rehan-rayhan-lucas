@@ -6,6 +6,10 @@ from secretss import SecretManager
 from puzzles import PuzzleManager
 
 
+
+
+
+
 class MysteryGame:
     def __init__(self):
         self.character_manager = CharacterManager()
@@ -16,11 +20,13 @@ class MysteryGame:
         self.inventory = Inventory()
         self.discovered_secrets = []
 
+
     def introduce_suspects(self):
         print("\nIntroducing the suspects:")
         for character in self.character_manager.get_characters():
             print(f"\n--- {character.name.capitalize()} ---")
             print(character.introduction())
+
 
     def investigate_clue(self):
         available_clues = self.clue_manager.get_clues()
@@ -37,6 +43,7 @@ class MysteryGame:
                 print("Invalid choice.")
         except ValueError:
             print("Invalid input. Please enter a number.")
+
 
     def question_suspect(self):
         suspects = self.character_manager.get_characters()
@@ -56,6 +63,7 @@ class MysteryGame:
         except ValueError:
             print("Invalid input. Please enter a number.")
 
+
     def use_clue_on_suspect(self, suspect):
         print("\nYour inventory:")
         for i, item in enumerate(self.inventory.items):
@@ -69,6 +77,7 @@ class MysteryGame:
                 return "Invalid choice."
         except ValueError:
             return "Invalid input. Please enter a number."
+
 
     def explore_location(self):
         locations = self.location_manager.get_locations()
@@ -92,6 +101,7 @@ class MysteryGame:
         except ValueError:
             print("Invalid input. Please enter a number.")
 
+
     def solve_puzzle(self):
         puzzles = self.puzzle_manager.puzzles
         print("\nAvailable puzzles:")
@@ -112,8 +122,10 @@ class MysteryGame:
         except ValueError:
             print("Invalid input. Please enter a number.")
 
+
     def view_inventory(self):
         print("\n" + self.inventory.view_inventory())
+
 
     def solve_mystery(self):
         print("\nYou are solving the mystery!")
@@ -127,6 +139,7 @@ class MysteryGame:
             print("\nThat’s incorrect. Keep investigating!")
             return False
 
+
     def play(self):
         print("Welcome to the Mystery Mansion!")
         print("There’s been a murder. You are the detective on the case.")
@@ -134,6 +147,7 @@ class MysteryGame:
         print("\nWould you like to meet the suspects first? (yes/no)")
         if input().strip().lower() == "yes":
             self.introduce_suspects()
+
 
         while True:
             print("\nWhat would you like to do?")
@@ -146,7 +160,9 @@ class MysteryGame:
             print("7. Exit game")
             print(f"Your current coins: {self.inventory.coins}")
 
+
             choice = input("Enter your choice (1-7): ").strip()
+
 
             if choice == "1":
                 self.investigate_clue()
@@ -167,7 +183,10 @@ class MysteryGame:
             else:
                 print("Invalid choice. Please try again.")
 
+
 if __name__ == "__main__":
     game = MysteryGame()
     game.play()
+
+
 
