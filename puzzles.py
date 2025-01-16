@@ -1,25 +1,28 @@
 class Puzzle:
-    def __init__(self, question, answer):
+    def __init__(self, question, answers):
+        # `answers` is now a list of acceptable answers
         self.question = question
-        self.answer = answer
+        self.answers = [ans.lower() for ans in (answers if isinstance(answers, list) else [answers])]
 
-    def solve(self, answer):
-        if answer.lower() == self.answer.lower():
-            return "Correct! You've solved the puzzle."
-        else:
-            return "Incorrect. Try again."
+    def check_answer(self, answer):
+        # Compare the provided answer with the acceptable answers, case-insensitive
+        return answer.lower() in self.answers
 
 
 class PuzzleManager:
     def __init__(self):
         self.puzzles = [
-            Puzzle("Who is the greatest and most glorious computer science teacher in all of existence?", "Mr. Whalen"),
-            Puzzle("Who is giving us a 100 on this project?", "Mr. Whalen"),
+            Puzzle("Who is the greatest and most glorious computer science teacher in all of existence?", 
+                   ["Mr. Whalen", "mr whalen", "whalen", "Mr whalen", "mr. whalen", "Mr. whalen", 
+                    "Mr.Whalen", "mr.whalen", "Mr.whalen"]),
+            Puzzle("Who is giving us a 100 on this project?", 
+                   ["Mr. Whalen", "mr whalen", "whalen", "Mr whalen", "mr. whalen", "Mr. whalen", 
+                    "Mr.Whalen", "mr.whalen", "Mr.whalen"]),
             Puzzle("What is the capital of France?", "Paris"),
             Puzzle("What is 28172 + 13213?", "41385"),
             Puzzle("What is the largest planet in our solar system?", "Jupiter"),
             Puzzle("Who wrote 'To Kill a Mockingbird'?", "Harper Lee"),
-            Puzzle("What is the boiling point of water?", "100°C"),
+            Puzzle("What is the boiling point of water?(in celcius only)", "100°C"),
             Puzzle("Who painted the Mona Lisa?", "Leonardo da Vinci"),
             Puzzle("What is the smallest prime number?", "2"),
             Puzzle("What is the chemical symbol for gold?", "Au"),
