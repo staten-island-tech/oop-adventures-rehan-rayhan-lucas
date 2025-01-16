@@ -9,7 +9,7 @@ class Puzzle:
         else:
             return "Incorrect. Try again."
 
-
+#Puzzles
 class PuzzleManager:
     def __init__(self):
         self.puzzles = [

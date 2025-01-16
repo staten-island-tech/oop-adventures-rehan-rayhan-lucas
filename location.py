@@ -3,7 +3,7 @@ class Location:
         self.name = name
         self.clues = clues
 
-
+#Locations
 class LocationManager:
     def __init__(self):
         self.locations = [
