@@ -1,3 +1,4 @@
+#Location Class
 class Location:
     def __init__(self, name, clues):
         self.name = name

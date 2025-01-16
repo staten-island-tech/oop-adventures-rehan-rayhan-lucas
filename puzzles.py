@@ -1,3 +1,4 @@
+#Puzzle Class
 class Puzzle:
     def __init__(self, question, answer):
         self.question = question

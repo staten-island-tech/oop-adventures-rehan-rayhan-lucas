@@ -1,7 +1,8 @@
+#Inventory Class
 class Inventory:
     def __init__(self):
         self.items = []
-        self.coins = 10  #the player starts with 10 coins by default
+        self.coins = 10  #The player starts with 10 coins by default idk
 
     def add_item(self, item):
         if item not in self.items:
