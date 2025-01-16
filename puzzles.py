@@ -1,12 +1,13 @@
 class Puzzle:
     def __init__(self, question, answers):
-        # `answers` is now a list of acceptable answers
+        
         self.question = question
         self.answers = [ans.lower() for ans in (answers if isinstance(answers, list) else [answers])]
 
     def check_answer(self, answer):
-        # Compare the provided answer with the acceptable answers, case-insensitive
+       
         return answer.lower() in self.answers
+
 
 
 class PuzzleManager:

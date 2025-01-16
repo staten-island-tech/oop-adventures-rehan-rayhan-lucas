@@ -101,8 +101,8 @@ class MysteryGame:
             if 0 <= choice < len(puzzles):
                 puzzle = puzzles[choice]
                 answer = input(f"\n{puzzle.question}\nYour answer: ").strip()
-                if puzzle.solve(answer).startswith("Correct"):
-                    print(puzzle.solve(answer))
+                if puzzle.check_answer(answer):
+                    print("Correct! You solved the puzzle.")
                     print(self.inventory.earn_coins(5))  # Earn 5 coins for solving a puzzle
                 else:
                     print("Incorrect. Try again.")
@@ -170,4 +170,5 @@ class MysteryGame:
 if __name__ == "__main__":
     game = MysteryGame()
     game.play()
+
 
